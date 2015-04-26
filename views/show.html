@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+   <div id="top" class="cl" style="img:src(" http:="" sla.ckcdn.com="" staticx3="" image="" common="" topnav.png")="">
+      <div class="z">
+         <a href="https://www.facebook.com/profile.php?id=100002390169665" style="padding-left:4px;padding-right:4px" title="我的FB">FB</a>
+	     <a href="http://mywindowsprograms-homework.blogspot.tw/" title="我的Blogger">網誌</a>
+	  </div>
+	  <div class="y">
+	     <a href="https://www.google.com/calendar/" style="padding-left:4px;padding-right:4px" title="Google日曆">日曆</a>
+		 <a href="https://translate.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google翻譯">翻譯</a>
+		 <a href="https://www.youtube.com/" style="padding-left:4px;padding-right:4px">Youtube</a>
+		 <a href="https://www.google.com.tw/maps/" style="padding-left:4px;padding-right:4px" title="Google地圖">地圖</a>
+		 <a href="https://www.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google首頁">離開</a>
+	  </div>
+   </div>
+   <div id="hd" class="wp cl">
+      <h2 id="spaceinfoshow">
+	     <strong id="spacename" class="mbn">小白的個人空間</strong>
+		 <span class="fw fs">
+		    <p>歡迎來到我的網頁</p>
+		 </span>
+		 <span id="spacedescription" class="fs1 mt fw"></span>
+	  </h2>
+   </div>
+   <div id="ct" class="ct2 wp cl">
+      <div class="mn">
+         <div class="bm">
+            <div class="bm_c">
+               <div class="bm_c">
+                  <h1>標題 : {{ post.title }}</h1>
+				  <h2>內容</h2>
+                  <p>{{ post.body }}</p>
+				  <p><a href="./..">返回</a></p>
+			   </div>
+            </div>
+         </div>
+      </div>
+   </div>
+{% endblock %}

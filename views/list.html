@@ -1,0 +1,133 @@
+{% extends 'layout.html' %}
+
+{% block title %}小白ㄝ個人空間-Why double may!!{% endblock %}
+
+{% block content %}
+   <div id="top" class="cl" style="img:src(" http:="" sla.ckcdn.com="" staticx3="" image="" common="" topnav.png")="">
+      <div class="z">
+         <a href="https://www.facebook.com/profile.php?id=100002390169665" style="padding-left:4px;padding-right:4px" title="我的FB">FB</a>
+	     <a href="http://mywindowsprograms-homework.blogspot.tw/" title="我的Blogger">網誌</a>
+	  </div>
+	  <div class="y">
+	     <a href="https://www.google.com/calendar/" style="padding-left:4px;padding-right:4px" title="Google日曆">日曆</a>
+		 <a href="https://translate.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google翻譯">翻譯</a>
+		 <a href="https://www.youtube.com/" style="padding-left:4px;padding-right:4px">Youtube</a>
+		 <a href="https://www.google.com.tw/maps/" style="padding-left:4px;padding-right:4px" title="Google地圖">地圖</a>
+		 <a href="https://www.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google首頁">離開</a>
+	  </div>
+   </div>
+   <div id="hd" class="wp cl">
+      <h2 id="spaceinfoshow">
+	     <strong id="spacename" class="mbn">小白的個人空間</strong>
+		 <span class="fw fs">
+		    <p>歡迎來到我的網頁</p>
+		 </span>
+		 <span id="spacedescription" class="fs1 mt fw"></span>
+	  </h2>
+   </div>
+   <div id="ct" class="wp cl">
+      <div id="diypage" class="area">
+	     <div id="frame1" class="frame cl">
+		    <div id="frame1_left" style="width:240px" class="z column">
+			   <div id="profile" class="block">
+			      <div class="title">
+				     <span>
+					    <a href="">大頭照</a>
+					 </span>
+				  </div>
+				  <div id="profile-picture" class="db_pd ta">
+				     <div>
+					    <img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10940485_749414588481540_28383169610041268_n.jpg?oh=f4fe219863ba1aaacb8b62a9cbea58f6&oe=55DDF30D&__gda__=1436204943_9dab6ded9fec89ec9ad7fe411115b65a" width="100" height="100"/>
+						<h3 class="mbn" style="color:#069">小白</h3>
+				     </div>
+				  </div>
+			   </div>
+			   <div id="album" class="block">
+			      <div class="title">
+				     <span>
+					    <a href="">相簿</a>
+					 </span>
+				  </div>
+				  <div id="album-content" class="db_pd ta">
+				     <ul class="cl">
+					    <h3 class="mbn" style="color:#069">無</h3>
+					 </ul>
+				  </div>
+			  </div>
+		    </div>
+			<div id="frame1_center" style="width:480px" class="z column">
+			   <div id="personalinfo" class="block">
+			      <div class="title">
+				     <span>
+					    <a href="">關於</a>
+					 </span>
+				  </div>
+			      <div id="personalinfo-content" class="db_pd">
+				     <ul id="p1" class="cl">
+					    <li>
+						   <em>性別</em>
+						   男
+						</li>
+						<li>
+						   <em>情感狀態</em>
+						   穩定交往中
+						</li>
+						<li>
+						   <em>學歷</em>
+						   國立金門大學資訊工程學系
+						</li>
+						<li>
+						   <em>生日</em>
+						   1994.4.23
+						</li>
+						<li>
+						   <em>居住地</em>
+						   桃園市
+						</li>
+				     </ul>
+				  </div>
+			   </div>
+			   <div id="share" class="block">
+                  <div class="title">
+                     <span>
+                        <a href="">分享</a>
+                     </span>
+                  </div>
+                  <div id="share-content" class="db_pd">
+                     <ul class="cl">
+                        <li>
+						   <font style="background-color:rgb(253, 253, 253)">【轉載地點】：YouTube</font>
+						</li>
+						<li>
+						   <iframe width="370" height="315" src="https://www.youtube.com/embed/_31r5JU5wXk" frameborder="0" allowfullscreen></iframe>
+                        </li>
+                     </ul>
+                  </div>
+               </div>				  
+            </div>
+            <div id="frame1_right" style="width:240px" class="z column">
+               <div id="wall" class="block">
+                  <div class="title">
+                     <span>
+                        <a href="">留言板</a>
+                     </span>
+                  </div>
+				  <div id="wall-content" class="db_pd">
+				     <p>You have <strong>{{ posts.length }}</strong> posts!</p>
+                     <p><a href="/post/new">Create a Post</a></p>
+                     <ul id="posts">
+                     {% for post in posts %}
+                        <li>
+                           <h2>{{ post.title }}</h2>
+                           <p><a href="/post/{{ post.id }}">Read post</a></p>
+                        </li>
+                     {% endfor %}
+                     </ul>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+      </div>
+   </div>
+  
+{% endblock %}

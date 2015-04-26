@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block title %}新增留言{% endblock %}
+
+{% block content %}
+   <div id="top" class="cl" style="img:src(" http:="" sla.ckcdn.com="" staticx3="" image="" common="" topnav.png")="">
+      <div class="z">
+         <a href="https://www.facebook.com/profile.php?id=100002390169665" style="padding-left:4px;padding-right:4px" title="我的FB">FB</a>
+	     <a href="http://mywindowsprograms-homework.blogspot.tw/" title="我的Blogger">網誌</a>
+	  </div>
+	  <div class="y">
+	     <a href="https://www.google.com/calendar/" style="padding-left:4px;padding-right:4px" title="Google日曆">日曆</a>
+		 <a href="https://translate.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google翻譯">翻譯</a>
+		 <a href="https://www.youtube.com/" style="padding-left:4px;padding-right:4px">Youtube</a>
+		 <a href="https://www.google.com.tw/maps/" style="padding-left:4px;padding-right:4px" title="Google地圖">地圖</a>
+		 <a href="https://www.google.com.tw/" style="padding-left:4px;padding-right:4px" title="Google首頁">離開</a>
+	  </div>
+   </div>
+   <div id="hd" class="wp cl">
+      <h2 id="spaceinfoshow">
+	     <strong id="spacename" class="mbn">小白的個人空間</strong>
+		 <span class="fw fs">
+		    <p>歡迎來到我的網頁</p>
+		 </span>
+		 <span id="spacedescription" class="fs1 mt fw"></span>
+	  </h2>
+   </div>
+   <div id="ct" class="ct2 wp cl">
+      <div class="mn">
+         <div class="bm">
+            <div class="bm_c">
+               <div class="bm_c">
+                  <h1>新的留言</h1>
+                  <p>新增一則留言</p>
+                  <form action="/post" method="post">
+                     <p><input type="text" placeholder="標題" name="title"></p>
+                     <p><textarea placeholder="內容" name="body"></textarea></p>
+                     <p><input type="submit" value="新增"></p>
+                  </form>
+			   </div>
+            </div>
+         </div>
+      </div>
+   </div>
+{% endblock %}
